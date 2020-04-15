@@ -18,4 +18,8 @@ export class ShoppingListComponent implements OnInit {
   ngOnInit() {
   }
 
+  add() {
+    alert("Ciao");
+  }
+
 }
