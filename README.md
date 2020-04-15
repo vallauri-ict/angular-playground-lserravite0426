@@ -3,7 +3,7 @@ This project was created during S.Y. 2019/2020.
 
 ## Contributor
 Serravite Lorenzo - 5B INF - S.Y. 2019/20 - IIS G. Vallauri - Fossano (CN)<br>
-Teacher: Cambieri Oscar, Mana Roberto
+Teachers: Cambieri Oscar, Mana Roberto
 
 ## Introduction
 The folder contains all projects developed in Angular during the S.Y.
