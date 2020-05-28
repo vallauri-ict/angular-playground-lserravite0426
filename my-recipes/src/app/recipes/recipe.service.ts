@@ -10,12 +10,17 @@ export class RecipeService {
 
   public recipes: Recipe[];
 
-  constructor(private dataStorageService: DataStorageService) { }
+  constructor(private dataStorageService: DataStorageService) {
+  }
 
   getRecipes() {
     this.dataStorageService.sendGetRequest('recipes').subscribe((data: any[]) => {
       console.log(data);
       this.recipes = data;
     })
+  }
+
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 }
