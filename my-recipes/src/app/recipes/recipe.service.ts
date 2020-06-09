@@ -9,18 +9,22 @@ export class RecipeService {
   @Output() recipeSelected = new EventEmitter<Recipe>();
 
   public recipes: Recipe[];
+  public selectedRecipe: Recipe;
 
   constructor(private dataStorageService: DataStorageService) {
   }
 
   getRecipes() {
-    this.dataStorageService.sendGetRequest('recipes').subscribe((data: any[]) => {
+    this.dataStorageService.sendGetRequest('recipes').subscribe((data: Recipe[]) => {
       console.log(data);
       this.recipes = data;
     })
   }
 
   getRecipe(index: number) {
-    return this.recipes[index];
+    this.dataStorageService.sendGetRequest('recipes/' + index).subscribe((data: Recipe) => {
+      console.log(data);
+      this.selectedRecipe = data;
+    })
   }
 }
